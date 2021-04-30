@@ -19,7 +19,7 @@ namespace ConsoleAppAdapater.Models
         }
         public void BetaalSalaris()
         {
-            Console.WriteLine("Paying");
+            Console.WriteLine("Paying the werknemer");
         }
 
         public string VolledigeNaam()

@@ -1,13 +1,28 @@
-﻿using System;
+﻿using ConsoleAppAdapater.Models.Interfaces;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ConsoleAppAdapater.Models
 {
     public class WerknemerSysteem
     {
+        private List<IWerknemer> _werknemers;
 
+        public WerknemerSysteem()
+        {
+            _werknemers = new List<IWerknemer>();
+        }
+       
+        public void VoegToeWerknemer(IWerknemer werknemer)
+        {
+            _werknemers.Add(werknemer);
+        }
+
+        public void UitBetalen()
+        {
+            foreach (IWerknemer werknemer in _werknemers)
+            {
+                werknemer.BetaalSalaris();
+            }
+        }
     }
 }

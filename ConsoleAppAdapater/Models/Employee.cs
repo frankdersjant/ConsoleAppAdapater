@@ -5,14 +5,26 @@ namespace ConsoleAppAdapater.Models
 {
     public class Employee : IEmployee
     {
+        public string firstName { get; private set; }
+        public string lastName { get; private set; }
+
+        public double Salary { get; private set; }
+
+        public Employee(string firstName, string lastName, double salary)
+        {
+            this.firstName = firstName;
+            this.lastName = lastName;
+            Salary = salary;
+        }
+
         public string FullName()
         {
-            throw new NotImplementedException();
+            return lastName + " " + firstName;
         }
 
         public void PaySalary()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Paying the Employee");
         }
     }
 }
