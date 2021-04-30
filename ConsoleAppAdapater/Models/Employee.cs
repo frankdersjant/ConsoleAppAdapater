@@ -1,13 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using ConsoleAppAdapater.Models.Interfaces;
+using System;
 
 namespace ConsoleAppAdapater.Models
 {
-    public class Employee
+    public class Employee : IEmployee
     {
+        public string FullName()
+        {
+            throw new NotImplementedException();
+        }
 
+        public void PaySalary()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
